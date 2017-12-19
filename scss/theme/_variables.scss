@@ -1,0 +1,33 @@
+// Spacing
+$base-unit: 4px;
+
+// Content
+$max-container-width: 875px;
+$max-content-width: 650px;
+$main-overlap-size: 2 * $base-line;
+
+// Navigation
+$nav-header-height: $base-line-small * 4; // 64px
+$nav-header-height-mobile: $base-line * 2; // 56px
+$nav-header-z-index: $z-over-content + 10;
+$mobile-nav-z-index: $z-over-content + 1;
+$color-link-nav: $color-link;
+$color-link-hover-nav: $color-link-hover;
+$color-header-nav-background: #fff;
+$color-header-nav-background-alpha: .975;
+$nav-header-link-alpha: .8;
+$nav-item-underline-size: 4px;
+
+// Hamburger
+$color-hamburger-bar: $color-black;
+
+// Box Shadow
+$default-box-shadow: 0 1px 5px rgba(0,0,0,.3);
+
+// Intro
+$color-intro: $color-inverted;
+$color-intro-background: #28abe3;
+
+// Footer
+$color-footer-background: transparent;
+$color-footer: $color-text;

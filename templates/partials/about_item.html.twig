@@ -1,0 +1,46 @@
+{% set show_summary = truncate and page.content != page.summary %}
+{% set show_email = page.header.person.contact.email %}
+{% set show_portrait = page.header.person.portrait %}
+
+<div id="{{ page.slug }}" class="card ripple">
+  <article  class="content">
+    <div class="row gutters">
+      <div class="col col-4">
+        <header>
+          {% if show_portrait %}
+            <img src="{{ page.media[page.header.person.portrait.url].url }}" alt="{{ page.header.person.portrait.alt }}" class="portrait centered grayscale" />
+          {% endif %}
+          <h3 class="text-center donthyphenate">
+            <a href="{{ page.url }}">{{page.title}}</a>
+            </br>
+            {% include 'partials/taxonomies.html.twig' %}
+          </h3>
+        </header>
+      </div>
+      <div class="col col-8">
+        {% if show_summary %}
+          {{ page.summary }}
+        {% else %}
+          {{ page.content }}
+        {% endif %}
+      </div>
+    </div>
+  </article>
+
+  {% if show_summary or show_email %}
+    <div class="actions content">
+      {% if show_summary %}
+        <a href="{{ page.url }}">
+          {{ "THEME_PLUSPUNKT.READ_MORE"|t }}
+        </a>
+      {% endif %}
+      {% if show_email %}
+        <address>
+          <a href="mailto:{{ page.header.person.contact.email|safe_email }}">
+            {{ page.header.person.contact.email|safe_email }}
+          </a>
+        </address>
+      {% endif %}
+    </div>
+  {% endif %}
+</div>

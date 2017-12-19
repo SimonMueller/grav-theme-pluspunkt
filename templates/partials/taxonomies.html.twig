@@ -1,0 +1,21 @@
+{% if page.taxonomy.tag %}
+  {% for tag in page.taxonomy.tag %}
+    <span class="label accent taxonomy">
+      <a href="{{ page.parent.url }}/tag{{ config.system.param_sep }}{{ tag }}">
+        {{ tag }}
+      </a>
+    </span>
+  {% endfor %}
+{% endif %}
+
+{% if page.taxonomy.author %}
+  {% for author in page.taxonomy.author %}
+    <address class="taxonomy">
+      <span class="label">
+        <a rel="author" href="{{ page.parent.url }}/author{{ config.system.param_sep }}{{ author }}">
+          {{ author }}
+        </a>
+      </span>
+    </address>
+  {% endfor %}
+{% endif %}

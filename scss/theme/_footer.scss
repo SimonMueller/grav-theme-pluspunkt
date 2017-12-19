@@ -1,0 +1,20 @@
+footer{
+  background-color: $color-footer-background;
+  padding: $base-line 0;
+
+  *{
+    color: $color-footer;
+  }
+}
+
+.widget{
+  padding-left: $base-line-small;
+
+  @media (min-width: $sm) {
+    padding-left: 0;
+  }
+
+  .title{
+    font-weight: bold;
+  }
+}

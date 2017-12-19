@@ -1,0 +1,53 @@
+{
+  "name": "grav-theme-pluspunkt",
+  "version": "1.0.0",
+  "description": "A simple, responsive and modern Grav theme built with Kube",
+  "keywords": [
+    "pluspunkt",
+    "grav",
+    "theme",
+    "kube",
+    "modern",
+    "responsive"
+  ],
+  "license": "GPL-3.0",
+  "private": false,
+  "scripts": {
+    "postinstall": "npm run build",
+    "build": "node node_modules/gulp/bin/gulp.js default",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SimonMueller/grav-theme-pluspunkt.git"
+  },
+  "author": {
+    "name": "Simon Müller",
+    "email": "pluspunkt-theme@protonmail.ch",
+    "url": "https://github.com/SimonMueller"
+  },
+  "bugs": {
+    "url": "https://github.com/SimonMueller/grav-theme-pluspunkt/issues"
+  },
+  "homepage": "https://github.com/SimonMueller/grav-theme-pluspunkt#readme",
+  "devDependencies": {
+    "Respond.js": "git+https:github.com/scottjehl/Respond#1.4.2",
+    "autoprefixer": "^7.1.2",
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-stage-3": "^6.24.1",
+    "font-awesome": "~4.7.0",
+    "gulp": "~3.9.1",
+    "gulp-babel": "^7.0.0",
+    "gulp-file": "~0.3.0",
+    "gulp-postcss": "^7.0.0",
+    "gulp-sass": "~3.1.0",
+    "kube": "git+https:github.com/imperavi/kube#v6.5.2",
+    "modernizr": "~3.5.0",
+    "smooth-scroll": "^12.1.5"
+  },
+  "engines": {
+    "node": "~8.5.0",
+    "npm": "~5.4.0"
+  }
+}

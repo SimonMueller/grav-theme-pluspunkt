@@ -1,0 +1,78 @@
+.intro{
+  @include flex;
+  @include flex-items-middle;
+
+  width: 100%;
+  height: $base-line * 8; // 224px
+  background-color: $color-intro-background;
+  background-size: cover;
+  padding: 0 $base-line-small;
+
+  @media (min-width: $sm) {
+    height: $base-line * 11; // 308px
+    padding: 0;
+  }
+
+  & > div{
+    margin-top: - $base-line;
+  }
+}
+
+.intro.fullscreen{
+  heigth: 100%;
+  height: calc(100% + #{$main-overlap-size});
+
+  width: 100%;
+
+  .indicator{
+    color: $color-intro;
+  }
+}
+
+.intro-text{
+  color: $color-intro;
+  font-size: $heading-font-size-3;
+  line-height: $heading-base-line-3;
+
+  @media (min-width: $sm) {
+    font-size: $heading-font-size-1;
+    line-height: $heading-base-line-1;
+  }
+}
+
+@keyframes(fadeIn){ from { opacity:0; } to { opacity:1; } }
+
+.fade-in {
+  opacity:0;
+
+  animation-name: fadeIn;
+  animation-duration: .3s;
+  animation-timing-function: ease-in;
+  animation-delay: .1s;
+  animation-fill-mode: forwards;
+}
+
+/*.bubble{
+  padding: 10px 20px;
+  position: relative;
+  background: $bubble-color;
+  display: inline-block;
+  z-index: $z-over-content;
+  margin-left: 15px;
+  box-shadow: $default-box-shadow;
+  border-radius: 4px;
+}
+
+.bubble::after{
+  content: '';
+  position: absolute;
+  border-style: solid;
+  border-width: 15px 15px 15px 0;
+  border-color: transparent $bubble-color;
+  display: block;
+  width: 0;
+  z-index: $z-over-content;
+  margin-top: -15px;
+  left: -15px;
+  top: 50%;
+}*/

@@ -1,0 +1,35 @@
+{% set organization = config.themes.pluspunkt.organization %}
+
+<address class="{{ classes }}">
+  {% if organization.name %}
+    <span>{{ organization.name }}</span></br>
+  {% endif %}
+
+  {% if organization.address.street %}
+    <span>{{ organization.address.street }}</span></br>
+  {% endif %}
+
+  {% if organization.address.country_code and organization.address.zip_code %}
+    <span>{{ organization.address.country_code }}-{{ organization.address.zip_code }}</span>
+  {% elseif organization.address.zip_code %}
+    <span>{{ organization.address.zip_code }}</span>
+  {% endif %}
+
+  {% if organization.address.city %}
+    <span>{{ organization.address.city }}</span></br>
+  {% endif %}
+
+  {% if organization.address.region %}
+    <span>{{organization.address.region }}</span></br>
+  {% endif %}
+
+  {% if organization.email %}
+    </br>
+    <a class="{{ classes }}" href="mailto:{{ organization.email|safe_email }}">{{ organization.email|safe_email }}</a>
+  {% endif %}
+
+  {% if organization.phone %}
+    </br>
+    <a class="{{ classes }}" href="tel:{{ organization.phone|safe_email }}">{{ organization.phone|safe_email }}</a>
+  {% endif %}
+</address>

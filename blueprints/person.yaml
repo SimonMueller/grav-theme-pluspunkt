@@ -1,0 +1,37 @@
+title: THEME_PLUSPUNKT.PERSON
+extends@: default
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+
+      fields:
+        content:
+          fields:
+            portrait:
+              type: section
+              title: THEME_PLUSPUNKT.PORTRAIT
+              underline: true
+
+              fields:
+                header.person.portrait.url:
+                  label: THEME_PLUSPUNKT.FILE
+                  type: pagemediaselect
+
+                header.person.portrait.alt:
+                  label: THEME_PLUSPUNKT.ALT_TEXT
+                  type: text
+
+            contact:
+              type: section
+              title: THEME_PLUSPUNKT.CONTACT
+              underline: true
+
+              fields:
+                header.person.contact.email:
+                  label: THEME_PLUSPUNKT.EMAIL
+                  type: text
+                  validate:
+                    type: email

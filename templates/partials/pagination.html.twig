@@ -1,0 +1,17 @@
+{% set pagination = pagination|default(page.collection.params.pagination) %}
+{% set base_url = base_url|default(page.url) %}
+
+{% if pagination|length > 1 %}
+  <nav class="pagination pager align-center">
+    <ul>
+      {% if pagination.hasPrev %}
+        {% set url =  base_url ~ (pagination.params ~ pagination.prevUrl)|replace({'//':'/'}) %}
+        <li class="prev"><a rel="prev" href="{{ url }}">{{ "THEME_PLUSPUNKT.PREVIOUS"|t }}</a></li>
+      {% endif %}
+      {% if pagination.hasNext %}
+        {% set url = base_url ~ (pagination.params ~ pagination.nextUrl)|replace({'//':'/'}) %}
+        <li class="next"><a rel="next" href="{{ url }}">{{ "THEME_PLUSPUNKT.NEXT"|t }}</a></li>
+      {% endif %}
+    </ul>
+  </nav>
+{% endif %}

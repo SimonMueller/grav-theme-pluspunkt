@@ -1,0 +1,4 @@
+enabled: true
+
+dropdowns:
+  enabled: false

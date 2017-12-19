@@ -1,0 +1,22 @@
+{% set fullscreen = (header.intro.fullscreen) ? 'fullscreen' : '' %}
+{% set center = (fullscreen) ? 'text-center' : '' %}
+
+<section class="intro {{ fullscreen }}">
+  <div class="container">
+    <div class="content fade-in">
+      {% if header.intro.text_enabled %}
+        <h1 class="intro-text donthyphenate {{ center }}">
+          {{ header.intro.text }}
+        </h1>
+      {% endif %}
+
+      {% if fullscreen %}
+        <div class="text-center">
+          <a href="#main" alt="{{ 'THEME_PLUSPUNKT.MAIN_CONTENT'|t }}">
+            <i class="fa fa-chevron-down fa-2x indicator" aria-hidden="true"></i>
+          </a>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</section>

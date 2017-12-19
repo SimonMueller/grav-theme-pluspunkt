@@ -1,0 +1,103 @@
+name: pluspunkt
+version: 1.0.0
+description: A simple, responsive and modern Grav theme built with Kube
+author:
+  name: Simon Müller
+  email: pluspunkt-theme@protonmail.ch
+  url: https://github.com/SimonMueller
+icon: plus-circle
+homepage: https://github.com/SimonMueller/grav-theme-pluspunkt
+keywords: pluspunkt, grav, theme, kube, modern, responsive
+bugs: https://github.com/SimonMueller/grav-theme-pluspunkt/issues
+license: GPL-3.0
+
+form:
+  validation: loose
+  fields:
+    dropdowns.enabled:
+      type: toggle
+      label: THEME_PLUSPUNKT.NAVBAR_DROPDOWNS
+      highlight: 1
+      default: 0
+      options:
+        1: PLUGIN_ADMIN.ENABLED
+        0: PLUGIN_ADMIN.DISABLED
+      validate:
+        type: bool
+
+    organization:
+      type: section
+      title: THEME_PLUSPUNKT.ORGANIZATION
+      underline: true
+
+      fields:
+        organization.name:
+          label: THEME_PLUSPUNKT.NAME
+          type: text
+
+        organization.email:
+          label: THEME_PLUSPUNKT.EMAIL
+          type: text
+          validate:
+            type: email
+
+        organization.phone:
+          label: THEME_PLUSPUNKT.PHONE
+          type: text
+
+        organization.address.street:
+          label: THEME_PLUSPUNKT.STREET
+          type: text
+
+        organization.address.zip_code:
+          label: THEME_PLUSPUNKT.ZIP_CODE
+          type: text
+          validate:
+            type: int
+
+        organization.address.city:
+          label: THEME_PLUSPUNKT.CITY
+          type: text
+
+        organization.address.region:
+          label: THEME_PLUSPUNKT.REGION
+          type: text
+
+        organization.address.country_code:
+          label: THEME_PLUSPUNKT.COUNTRY_CODE
+          type: text
+
+        organization.geo.latitude:
+          label: THEME_PLUSPUNKT.LATITUDE
+          type: text
+          validate:
+            type: number
+
+        organization.geo.longitude:
+          label: THEME_PLUSPUNKT.LONGITUDE
+          type: text
+          validate:
+            type: number
+
+    footer:
+      type: section
+      title: THEME_PLUSPUNKT.FOOTER
+      underline: true
+
+      fields:
+        footer.widgets:
+          name: widgets
+          type: list
+          label: THEME_PLUSPUNKT.WIDGETS
+          fields:
+            .title:
+              type: text
+              label: PLUGIN_ADMIN.TITLE
+              validate:
+                required: true
+
+            .content:
+              type: editor
+              label: PLUGIN_ADMIN.CONTENT
+              validate:
+                required: true

@@ -1,0 +1,25 @@
+title: THEME_PLUSPUNKT.POST
+extends@: default
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+
+      fields:
+        content:
+          fields:
+            download:
+              type: section
+              title: THEME_PLUSPUNKT.DOWNLOAD
+              underline: true
+
+              fields:
+                header.download.url:
+                  label: THEME_PLUSPUNKT.FILE
+                  type: pagemediaselect
+
+                header.download.alt:
+                  label: THEME_PLUSPUNKT.ALT_TEXT
+                  type: text

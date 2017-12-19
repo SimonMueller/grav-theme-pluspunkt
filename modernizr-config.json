@@ -1,0 +1,12 @@
+{
+  "classPrefix": "",
+  "options": [
+    "setClasses",
+    "html5shiv",
+    "html5printshiv"
+  ],
+  "feature-detects": [
+    "css/flexbox",
+    "css/transforms"
+  ]
+}

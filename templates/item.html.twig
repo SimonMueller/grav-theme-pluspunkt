@@ -1,0 +1,33 @@
+{% extends 'partials/base.html.twig' %}
+
+{% set show_download = header.download %}
+
+{% block content %}
+  <div class="container">
+    <div class="card">
+      <article class="content">
+        <header>
+          <h1 class="hyphenate">
+            {{ page.title }}
+          </br>
+            {% include 'partials/taxonomies.html.twig' %}
+          </h1>
+
+          {% if page.publish_date %}
+            <span class="label default"><time>{{ page.publish_date|date() }}</time></span>
+          {% endif %}
+        </header>
+
+        {{ page.content }}
+      </article>
+
+      {% if show_download %}
+        <div class="actions content">
+          <a target="_blank" href="{{ page.media[header.download.url].url }}">
+            {{ header.download.alt }}
+          </a>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+{% endblock %}

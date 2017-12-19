@@ -1,0 +1,30 @@
+.card{
+  background-color: #fff;
+  margin-bottom: $base-line;
+  box-shadow: 0 1px 5px rgba(0,0,0,.3);
+  padding: $base-line-small;
+}
+
+.card .actions{
+  $border-size: 1px;
+  border-top: $border-size solid $color-lightgray;
+  margin-top: $base-unit - $border-size;
+  padding: $base-line-small 0;
+
+  @include flex;
+  @include flex-items-wrap;
+
+  a{
+    display: inline-block;
+    margin-right: $base-line-small;
+  }
+}
+
+.ripple{
+  transition: box-shadow .2s linear;
+}
+
+.ripple:hover, .riple:active{
+  transition: box-shadow .2s linear;
+  box-shadow: 0 2px 15px -3px rgba(0,0,0,.3);
+}

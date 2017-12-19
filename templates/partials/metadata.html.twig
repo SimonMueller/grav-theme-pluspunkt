@@ -1,0 +1,14 @@
+{% for meta in page.metadata %}
+  <meta
+  {% if meta.name %}
+    name="{{ meta.name }}"
+  {% endif %}
+
+  {% if meta.property %}
+    property="{{ meta.property }}"
+  {% endif %}
+
+  {% if meta.content %}
+    content="{{ meta.content }}"
+  {% endif %}/>
+{% endfor %}

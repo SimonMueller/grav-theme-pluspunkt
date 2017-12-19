@@ -1,0 +1,27 @@
+{% set footer = config.themes.pluspunkt.footer %}
+
+<div class="container">
+  <div class="row gutters align-center">
+    {% for widget in config.themes.pluspunkt.footer.widgets %}
+      <div class="widget col col-3">
+        <p class="title small">{{ widget.title }}</p>
+
+        {{ widget.content|markdown }}
+      </div>
+    {% endfor %}
+  </div>
+
+  <div>
+    <p class="text-center small">
+      <span class="small"><i class="fa fa-copyright fa-fw" aria-hidden="true"></i> {{ 'now'|date('Y') }}</span>
+      </br>
+      <span>Made with </span>
+      <i class="fa fa-heart" aria-hidden="true"></i>
+      <span>+</span>
+      <a href="https://getgrav.org/" target="_blank"><i class="fa fa-grav" aria-hidden="true"></i></a>
+      <span>+</span>
+      <a href="https://imperavi.com/kube" target="_blank">Kube</a>
+      <span>by {{ site.author.name }}</span>
+    </p>
+  </div>
+</div>

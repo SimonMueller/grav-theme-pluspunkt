@@ -1,0 +1,67 @@
+{% set crumbs = breadcrumbs.get() %}
+{% set breadcrumbs_config = config.plugins.breadcrumbs %}
+{% set divider = breadcrumbs_config.icon_divider_classes %}
+{% set schema_item_list = [] %}
+
+{% if crumbs|length > 1 or breadcrumbs_config.show_all %}
+  <nav class="breadcrumbs push-center">
+    {% if breadcrumbs_config.icon_home %}
+      <i class="{{ breadcrumbs_config.icon_home }}"></i>
+    {% endif %}
+    <ul>
+      {% for crumb in crumbs %}
+        {% if not loop.last %}
+          {% if crumb.routable %}
+            <li>
+              <a href="{{ crumb.url }}">
+                <span>{{ crumb.menu }}</span>
+              </a>
+            </li>
+          {% else  %}
+            <li>
+              <a>
+                <span>{{ crumb.menu }}</span>
+              </a>
+            </li>
+          {% endif %}
+        {% else %}
+          {% if breadcrumbs_config.link_trailing %}
+            <li>
+              <a href="{{ crumb.url }}">
+                <em><span>{{ crumb.menu }}</span></em>
+              </a>
+            </li>
+          {% else %}
+            <li>
+              <a>
+                <em><span>{{ crumb.menu }}</span></em>
+              </a>
+            </li>
+          {% endif %}
+        {% endif %}
+
+        {% set schema_list_item =
+          [{
+            "@type": "ListItem",
+            "position": loop.index,
+            "item": {
+              "@id": crumb.url(true),
+              "name": crumb.menu
+            }
+          }]
+        %}
+        {% set schema_item_list = schema_item_list|merge(schema_list_item) %}
+
+      {% endfor %}
+    </ul>
+  </nav>
+
+  <script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": {{ schema_item_list|json_encode }}
+  }
+  </script>
+
+{% endif %}

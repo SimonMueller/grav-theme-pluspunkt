@@ -1,0 +1,24 @@
+enabled: true
+
+dropdowns:
+  enabled: true
+
+organization:
+  name: example
+  phone: +1234567890
+  address:
+    street: Example Street 1
+    city: Example
+    zip_code: 1234
+
+footer:
+  widgets:
+    -
+      title: Awesome widget
+      content: 'This is a footer widget and can contain any type of content.'
+    -
+      title: Lists of things
+      content: '1. [Grav CMS](https://getgrav.org)\r\n2. [Kube](https://imperavi.com/kube)\r\n3. Open-source theme'
+    -
+      title: Lorem ipsum
+      content: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod.'

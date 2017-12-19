@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="{{ grav.language.getActive ? grav.language.getActive : 'en'}}" class="no-js">
+  <head>
+    {% block head %}
+      <title>{% if header.title %}{{ header.title }} | {% endif %}{{ site.title }}</title>
+
+      {% include 'partials/metadata.html.twig' %}
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+      {% block favicons %}
+        <link rel="icon" href="{{ url('theme://images/favicon.ico', true) }}">
+      {% endblock %}
+
+      {% block jsonld %}
+        <script type="application/ld+json">
+          {
+            "@context": "http://schema.org",
+            "@type": "WebSite",
+            "url": "{{ base_url_absolute }}"
+          }
+        </script>
+      {% endblock %}
+
+      {% block webfont %}
+        <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700" rel="stylesheet">
+      {% endblock %}
+
+      {% block stylesheets %}
+        {% do assets.addCss('theme://css/master.css', {'priority': 100}) %}
+        {% do assets.addCss('theme://css/custom.css', 99) %}
+        {% do assets.addCss('theme://css/font-awesome.min.css', {'priority': 98}) %}
+
+        {{ assets.css() }}
+      {% endblock %}
+    {% endblock %}
+  </head>
+  <body class="preload body-nav-fix">
+    {% block body %}
+
+      {% block navigation %}
+        {% include 'partials/navigation.html.twig' %}
+      {% endblock %}
+
+      {% block browserchecks %}
+        <noscript>
+          <div id="nojs" class="message warning text-center">
+            {{ "THEME_PLUSPUNKT.NOSCRIPT"|t }}
+          </div>
+        </noscript>
+
+        <div id="oldbrowser" class="message error text-center hide">
+          {{ "THEME_PLUSPUNKT.OLDBROWSER"|t }}
+        </div>
+      {% endblock %}
+
+      {% block intro %}
+        {% if header.intro.enabled %}
+          {% include 'partials/intro.html.twig' %}
+        {% endif %}
+      {% endblock %}
+
+      {% set overlap = header.intro.enabled ? 'overlap' : '' %}
+
+      {% block main %}
+        <main id="main" class="{{ overlap }}">
+          {% block content %}
+          {% endblock %}
+
+          {% block pagination %}
+            {% if config.plugins.pagination.enabled and collection.params.pagination %}
+              {% include 'partials/pagination.html.twig' with {'base_url':page.url, 'pagination':collection.params.pagination}%}
+            {% endif %}
+          {% endblock %}
+
+          {% block breadcrumbs %}
+            {% if config.plugins.breadcrumbs.enabled %}
+              {% include 'partials/breadcrumbs.html.twig' %}
+            {% endif %}
+          {% endblock %}
+        </main>
+      {% endblock %}
+
+      {% block footer %}
+        <footer>
+          {% include 'partials/footer.html.twig' %}
+        </footer>
+      {% endblock %}
+    {% endblock %}
+
+    {% block javascripts %}
+      {% do assets.add('theme://js/modernizr.js', {'priority': 100}) %}
+
+      {% if browser.getBrowser == 'msie' and browser.getVersion <= 8 %}
+        {% do assets.add('theme://js/respond.min.js', {'priority': 99}) %}
+      {% endif %}
+
+      {% do assets.add('theme://js/smooth-scroll.js', {'priority': 98}) %}
+      {% do assets.add('theme://js/pluspunkt.js', {'priority': 97}) %}
+
+      {{ assets.js() }}
+    {% endblock %}
+  </body>
+</html>

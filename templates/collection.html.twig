@@ -1,0 +1,19 @@
+{% extends 'partials/base.html.twig' %}
+
+{% set collection = page.collection %}
+
+{% block content %}
+  {% block collection_head %}
+    {% if header.collection_head %}
+      <section class="container">
+        {% include 'partials/collection_head.html.twig' with {'list_items': true} %}
+      </section>
+    {% endif %}
+  {% endblock %}
+
+  {% block collection %}
+    <section class="container">
+      {% include 'partials/collection.html.twig' with {'include_item': 'partials/collection_item.html.twig'} %}
+    </section>
+  {% endblock %}
+{% endblock %}

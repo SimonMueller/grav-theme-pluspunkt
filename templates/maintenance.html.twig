@@ -1,0 +1,36 @@
+{% extends 'partials/base.html.twig' %}
+
+{% block jsonld %}
+{% endblock %}
+
+{% block navigation %}
+{% endblock %}
+
+{% block browserchecks %}
+{% endblock %}
+
+{% block intro %}
+{% endblock %}
+
+{% block content %}
+  <div class="container">
+    <div class="card">
+      <div class="content">
+        {{ 'PLUGIN_MAINTENANCE.OFFLINE_MARKDOWN'|t|markdown }}
+
+        {{ page.content }}
+
+        {% include 'partials/address.html.twig' %}
+      </div>
+    </div>
+  </div>
+{% endblock %}
+
+{% block breadcrumbs %}
+{% endblock %}
+
+{% block footer %}
+{% endblock %}
+
+{% block javascripts %}
+{% endblock %}

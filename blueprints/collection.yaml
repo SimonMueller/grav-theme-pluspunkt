@@ -1,0 +1,22 @@
+title: THEME_PLUSPUNKT.COLLECTION
+extends@: default
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+
+      fields:
+        advanced:
+          fields:
+            overrides:
+              fields:
+                header.child_type:
+                  default: item
+        blog:
+          type: tab
+          title: THEME_PLUSPUNKT.LIST
+          import@:
+            type: partials/list
+            context: blueprints://

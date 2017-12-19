@@ -1,0 +1,80 @@
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6{
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
+
+  a{
+    text-decoration: none;
+
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+}
+
+a{
+  &:hover{
+    transition: all linear .2s;
+  }
+}
+
+address{
+  .label{
+    font-style: normal;
+  }
+}
+
+.hyphenate {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
+}
+
+.donthyphenate {
+  overflow-wrap: normal;
+  word-wrap: normal;
+  hyphens: none;
+}
+
+.force-word-break{
+  word-spacing: 99999px;
+}
+
+textarea {
+  resize:vertical;
+}
+
+pre{
+  overflow-x: auto;
+  background-color: transparent;
+}
+
+ul{
+  & > li{
+    margin-bottom: $base-unit;
+  }
+}
+
+ul.simple{
+  list-style: none;
+  margin-left: 0;
+  li{
+    margin-bottom: 0;
+  }
+}
+
+.pagination a {
+  &:hover {
+    background: none;
+  }
+}
+
+.pagination em,
+.pagination li.active a {
+  background: none;
+}

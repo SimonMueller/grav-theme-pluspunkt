@@ -1,0 +1,23 @@
+{% set collection = page.collection %}
+{% set schema_list = [] %}
+
+{% for child in collection %}
+  {% include include_item with {'page': child, 'truncate': site.summary.enabled} %}
+
+  {% set schema_list_item =
+    [{
+      "@type": "ListItem",
+      "position": loop.index,
+      "url": child.url(true)
+    }]
+  %}
+  {% set schema_list = schema_list|merge(schema_list_item) %}
+{% endfor %}
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "ItemList",
+    "itemListElement": {{ schema_list|json_encode }}
+  }
+</script>

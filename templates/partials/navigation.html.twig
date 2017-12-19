@@ -1,0 +1,68 @@
+{% macro loop(page) %}
+  <ul>
+    {% for p in page.children.visible %}
+      {% set current_page = (p.active or p.activeChild) ? 'active' : '' %}
+      {% if p.children.visible.count > 0 %}
+        <li class="{{ current_page }} has-children">
+          <a href="{{ p.url }}">
+            {{ p.menu }} <i class="fa fa-chevron-down hide-sm" aria-hidden="true"></i>
+          </a>
+
+          <nav class="subnav hide-sm">
+            {{ _self.loop(p) }}
+          </nav>
+        </li>
+      {% else %}
+        <li class="{{ current_page }}">
+          <a href="{{ p.url }}">
+            {{ p.menu }}
+          </a>
+        </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+{% endmacro %}
+
+{% set nav %}
+  {% if config.themes.pluspunkt.dropdowns.enabled %}
+    {{ _self.loop(pages) }}
+  {% else %}
+    <ul>
+      {% for page in pages.children.visible %}
+        {% set current_page = (page.active or page.activeChild) ? 'active' : '' %}
+        <li class="{{ current_page }}">
+          <a href="{{ page.url }}">
+            {{ page.menu }}
+           </a>
+         </li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+{% endset %}
+
+<header class="nav-header">
+  <div class="container">
+    <nav class="nav-logo">
+      <a href="{{ base_url_absolute }}">
+        {{ site.title }}
+        {# {% if browser.getBrowser() == 'msie' %}
+          <img alt="Logo" class="logo" src="{{ url('theme://images/pluspunkt_logo_small.png', true) }}" />
+        {% else %}
+          <img alt="Logo" class="logo" src="{{ url('theme://images/pluspunkt_logo.png', true) }}" />
+        {% endif %} #}
+      </a>
+    </nav>
+
+    <input id="show-mobile-nav-toggle" type="checkbox"/>
+    <nav class="nav primary-nav">
+      {{ nav }}
+    </nav>
+
+    <label for="show-mobile-nav-toggle" class="mobile-nav-toggle show-sm" onclick>
+      <span class="hamburger hamburger--htx">
+        <span></span>
+      </span>
+    </label>
+
+  </div>
+</header>

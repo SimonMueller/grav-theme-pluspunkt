@@ -1,0 +1,15 @@
+extends@: default
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+
+      fields:
+        intro:
+          type: tab
+          title: THEME_PLUSPUNKT.INTRO
+          import@:
+            type: partials/intro
+            context: blueprints://

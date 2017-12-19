@@ -1,0 +1,37 @@
+{% extends 'partials/base.html.twig' %}
+
+{% set show_email = header.person.contact.email %}
+{% set show_portrait = header.person.portrait %}
+
+{% block content %}
+  <div class="container">
+    <div class="card">
+      <article class="content">
+        <header>
+          {% if show_portrait %}
+            <img src="{{ page.media[header.person.portrait.url].url }}" alt="{{ header.person.portrait.alt }}" class="portrait centered grayscale" />
+          {% endif %}
+          <div class="text-center">
+            <h1 class="donthyphenate">
+              {{ page.title }}
+              </br>
+              {% include 'partials/taxonomies.html.twig' %}
+            </h1>
+          </div>
+        </header>
+
+        {{ page.content }}
+      </article>
+
+      {% if show_email %}
+        <div class="actions content">
+          <address>
+            <a href="mailto:{{ header.person.contact.email|safe_email }}">
+              {{ header.person.contact.email|safe_email }}
+            </a>
+          </address>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+{% endblock %}

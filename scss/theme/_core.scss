@@ -1,0 +1,54 @@
+html, body {
+  height: 100%;
+}
+
+.preload{
+  transition: none !important;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+#nojs.message, #oldbrowser.message{
+  margin-bottom: 0;
+}
+
+.no-flexbox, .no-csstransforms, .no-scriptdefer{
+  #oldbrowser{
+    display: block !important;
+  }
+}
+
+.overlap{
+  margin-top: -$main-overlap-size;
+}
+
+article{
+  header{
+    margin-bottom: $heading-margin-bottom;
+  }
+}
+
+.content{
+  margin: auto;
+  max-width: $max-content-width;
+  padding: 0;
+
+  @media (min-width: $sm) {
+    padding: $base-line-small 0;
+  }
+}
+
+.container{
+  margin-left: auto;
+  margin-right: auto;
+
+  width: 100%;
+  padding: 0;
+  max-width: $max-container-width;
+
+  @media (min-width: $sm) {
+    padding: 0 $base-line-small;
+  }
+}

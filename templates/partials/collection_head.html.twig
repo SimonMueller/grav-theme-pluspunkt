@@ -1,0 +1,15 @@
+{% set collection = page.collection %}
+
+<div class="card">
+  <div class="content">
+    {{ page.content }}
+
+    {% if list_items %}
+      <ul>
+        {% for child in collection %}
+          <li><a href="#{{ child.slug }}">{{ child.title }}</a></li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  </div>
+</div>

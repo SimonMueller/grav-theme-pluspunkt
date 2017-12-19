@@ -1,0 +1,39 @@
+{% set show_summary = truncate and page.content != page.summary %}
+{% set show_download = page.header.download %}
+
+<div id="{{ page.slug }}" class="card ripple">
+  <article class="content">
+    <header>
+      <h3>
+        <a href="{{ page.url }}">{{ page.title }}</a>
+        </br>
+        {% include 'partials/taxonomies.html.twig' %}
+      </h3>
+
+      {% if page.publish_date %}
+        <span class="label default"><time>{{ page.publish_date|date() }}</time></span>
+      {% endif %}
+    </header>
+
+    {% if show_summary %}
+      {{ page.summary }}
+    {% else %}
+      {{ page.content }}
+    {% endif %}
+  </article>
+
+  {% if show_summary or show_download %}
+    <div class="actions content">
+      {% if show_summary %}
+        <a href="{{ page.url }}">
+          {{ "THEME_PLUSPUNKT.READ_MORE"|t }}
+        </a>
+      {% endif %}
+      {% if show_download %}
+        <a target="_blank" href="{{ page.media[page.header.download.url].url }}">
+          {{ page.header.download.alt }}
+        </a>
+      {% endif %}
+    </div>
+  {% endif %}
+</div>
