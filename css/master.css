@@ -2905,10 +2905,10 @@ footer {
     color: #313439; }
 
 .widget {
-  padding-left: 20px; }
+  padding: 0 20px; }
   @media (min-width: 768px) {
     .widget {
-      padding-left: 0; } }
+      padding: 0; } }
   .widget .title {
     font-weight: bold; }
 
