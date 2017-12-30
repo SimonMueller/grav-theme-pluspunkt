@@ -10,11 +10,14 @@
           {% if show_portrait %}
             <img src="{{ page.media[page.header.person.portrait.url].url }}" alt="{{ page.header.person.portrait.alt }}" class="portrait centered grayscale" />
           {% endif %}
-          <h3 class="text-center donthyphenate">
-            <a href="{{ page.url }}">{{page.title}}</a>
-            </br>
+
+          <div class="text-center">
+            <h3 class="text-center donthyphenate">
+              <a href="{{ page.url }}">{{page.title}}</a>
+              </br>
+            </h3>
             {% include 'partials/taxonomies.html.twig' %}
-          </h3>
+          </div>
         </header>
       </div>
       <div class="col col-8">

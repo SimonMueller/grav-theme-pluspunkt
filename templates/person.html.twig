@@ -11,12 +11,12 @@
           {% if show_portrait %}
             <img src="{{ page.media[header.person.portrait.url].url }}" alt="{{ header.person.portrait.alt }}" class="portrait centered grayscale" />
           {% endif %}
+
           <div class="text-center">
             <h1 class="donthyphenate">
               {{ page.title }}
-              </br>
-              {% include 'partials/taxonomies.html.twig' %}
             </h1>
+            {% include 'partials/taxonomies.html.twig' %}
           </div>
         </header>
 
