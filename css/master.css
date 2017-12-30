@@ -2525,6 +2525,8 @@ html, body {
 
 article header {
   margin-bottom: 16px; }
+  article header h1, article header h2, article header h3, article header h4, article header h5, article header h6 {
+    margin-bottom: 0; }
 
 .content {
   margin: auto;
