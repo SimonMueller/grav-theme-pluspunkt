@@ -8,10 +8,10 @@ footer{
 }
 
 .widget{
-  padding-left: $base-line-small;
+  padding: 0 $base-line-small;
 
   @media (min-width: $sm) {
-    padding-left: 0;
+    padding: 0;
   }
 
   .title{
