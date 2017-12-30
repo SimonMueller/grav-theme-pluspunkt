@@ -80,7 +80,13 @@ Manually updating pluspunkt is pretty simple. Here is what you will need to do t
 
 ### General Collections
 
-General collections have a collection head (the collection page content) and list the contained items.
+General collections can have a collection head (the collection page content) and can list the contained items.
+
+```yaml
+collection_head:
+  enabled: true
+  list_items: true
+```
 
 > Note: The Blog page is just an alias of a general collection page for compatibility.
 
