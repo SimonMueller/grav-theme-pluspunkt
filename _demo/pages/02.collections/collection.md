@@ -6,7 +6,9 @@ intro:
   text_enabled: true
   text: General collection
 
-collection_head: true
+collection_head:
+  enabled: true
+  list_items: true
 
 content:
   items: '@self.children'
