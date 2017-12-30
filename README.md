@@ -78,6 +78,18 @@ Manually updating pluspunkt is pretty simple. Here is what you will need to do t
   * Modular default view template
   * Modular form view template
 
+### General Collections
+
+General collections can have a collection head (the collection page content) and can list the contained items.
+
+```yaml
+collection_head:
+  enabled: true
+  list_items: true
+```
+
+> Note: The Blog page is just an alias of a general collection page for compatibility.
+
 ### Organization Address
 
 The theme configuration allows you to set theme wide organization address data. This can be used for example in the contact page to generate an address.
@@ -151,6 +163,10 @@ person:
   contact:
     email: john.doe@example.com
 ```
+
+### About Page
+
+The about page has a collection head and lists the person pages with address and portrait.
 
 ### Item Page
 

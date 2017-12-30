@@ -6,6 +6,9 @@ intro:
   text_enabled: true
   text: About us
 
+collection_head:
+  enabled: true
+
 content:
   items: '@self.children'
   order:

@@ -9,12 +9,12 @@
         <header>
           <h1 class="hyphenate">
             {{ page.title }}
-          </br>
-            {% include 'partials/taxonomies.html.twig' %}
           </h1>
 
-          {% if page.publish_date %}
-            <span class="label default"><time>{{ page.publish_date|date() }}</time></span>
+          {% include 'partials/taxonomies.html.twig' %}
+
+          {% if page.header.publish_date %}
+            <span class="label default"><time>{{ page.header.publish_date|date() }}</time></span>
           {% endif %}
         </header>
 

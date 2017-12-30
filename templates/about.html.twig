@@ -4,9 +4,11 @@
 
 {% block content %}
   {% block collection_head %}
-    <section class="container">
-      {% include 'partials/collection_head.html.twig' with {'list_items': false} %}
-    </section>
+    {% if header.collection_head.enabled|defined(false) %}
+      <section class="container">
+        {% include 'partials/collection_head.html.twig' with {'list_items': header.collection_head.list_items|defined(false)} %}
+      </section>
+    {% endif %}
   {% endblock %}
 
   {% block collection %}

@@ -2525,6 +2525,8 @@ html, body {
 
 article header {
   margin-bottom: 16px; }
+  article header h1, article header h2, article header h3, article header h4, article header h5, article header h6 {
+    margin-bottom: 0; }
 
 .content {
   margin: auto;
@@ -2905,16 +2907,20 @@ footer {
     color: #313439; }
 
 .widget {
-  padding-left: 20px; }
+  padding: 0 20px; }
   @media (min-width: 768px) {
     .widget {
-      padding-left: 0; } }
+      padding: 0; } }
   .widget .title {
     font-weight: bold; }
 
 .centered {
   margin-left: auto;
   margin-right: auto; }
+
+.breadcrumbs ul {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
 
 /*
   Hamburger Menu
