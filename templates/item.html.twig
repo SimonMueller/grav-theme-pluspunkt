@@ -9,9 +9,9 @@
         <header>
           <h1 class="hyphenate">
             {{ page.title }}
-          </br>
-            {% include 'partials/taxonomies.html.twig' %}
           </h1>
+
+          {% include 'partials/taxonomies.html.twig' %}
 
           {% if page.header.publish_date %}
             <span class="label default"><time>{{ page.header.publish_date|date() }}</time></span>

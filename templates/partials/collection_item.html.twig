@@ -6,9 +6,9 @@
     <header>
       <h3>
         <a href="{{ page.url }}">{{ page.title }}</a>
-        </br>
-        {% include 'partials/taxonomies.html.twig' %}
       </h3>
+
+      {% include 'partials/taxonomies.html.twig' %}
 
       {% if page.header.publish_date %}
         <span class="label default"><time>{{ page.header.publish_date|date() }}</time></span>
