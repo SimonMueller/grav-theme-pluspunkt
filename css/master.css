@@ -2916,6 +2916,10 @@ footer {
   margin-left: auto;
   margin-right: auto; }
 
+.breadcrumbs ul {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+
 /*
   Hamburger Menu
 */
