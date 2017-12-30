@@ -13,8 +13,8 @@
             {% include 'partials/taxonomies.html.twig' %}
           </h1>
 
-          {% if page.publish_date %}
-            <span class="label default"><time>{{ page.publish_date|date() }}</time></span>
+          {% if page.header.publish_date %}
+            <span class="label default"><time>{{ page.header.publish_date|date() }}</time></span>
           {% endif %}
         </header>
 
