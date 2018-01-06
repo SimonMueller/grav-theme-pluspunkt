@@ -15,3 +15,9 @@
     * Breadcrumb overflow handling (wrap)
     * Correct padding of footer widget
     * Fix display of publish date
+
+# v1.0.2
+## 6.01.2018
+
+1. [](#new)
+    * Added CONTRIBUTING.md

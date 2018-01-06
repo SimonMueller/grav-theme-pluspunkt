@@ -194,12 +194,6 @@ If you want to set pluspunkt as the default theme, you can do so by following th
 
 Once this is done, you should be able to see the new theme on the frontend. Keep in mind any customizations made to the previous theme will not be reflected as all of the theme and templating information is now being pulled from the **pluspunkt** folder.
 
-# Contributing
-
-If you would like to contribute to this project you are more than welcome! Just open an Issue or a Pull Request with your idea or suggested change.
-
-> [Code of Conduct](CODE_OF_CONDUCT.md)
-
 # License
 
 Copyright (C) 2017 Simon Müller
