@@ -1,6 +1,10 @@
 {% set pagination = pagination|default(page.collection.params.pagination) %}
 {% set base_url = base_url|default(page.url) %}
 
+{% if base_url == '/' %}
+  {% set base_url = '' %}
+{% endif %}
+
 {% if pagination|length > 1 %}
   <nav class="pagination pager align-center">
     <ul>
