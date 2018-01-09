@@ -21,3 +21,9 @@
 
 1. [](#new)
     * Added CONTRIBUTING.md
+
+# v1.0.3
+## 9.01.2018
+
+1. [](#bugfix)
+    * Fix pagination base_url with relative URLs
