@@ -29,7 +29,6 @@
       {% block stylesheets %}
         {% do assets.addCss('theme://css/master.css', {'priority': 100}) %}
         {% do assets.addCss('theme://css/custom.css', 99) %}
-        {% do assets.addCss('theme://css/font-awesome.min.css', {'priority': 98}) %}
 
         {{ assets.css() }}
       {% endblock %}
