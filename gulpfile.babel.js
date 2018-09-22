@@ -7,13 +7,6 @@ import autoprefixer from 'autoprefixer';
 import babel from 'gulp-babel';
 import fs from 'fs';
 
-gulp.task('load-css', () => {
-  return gulp.src([
-      'node_modules/font-awesome/css/font-awesome.min.css',
-    ])
-    .pipe(gulp.dest('css'));
-});
-
 gulp.task('load-js', () => {
   return gulp.src([
       'node_modules/respond.js/dest/respond.min.js',
@@ -24,12 +17,12 @@ gulp.task('load-js', () => {
 
 gulp.task('load-fonts', () => {
   return gulp.src([
-      'node_modules/font-awesome/fonts/*'
+      'node_modules/@fortawesome/fontawesome-free/webfonts/*'
     ])
-    .pipe(gulp.dest('fonts'));
+    .pipe(gulp.dest('webfonts'));
 });
 
-gulp.task('load-assets', ['load-fonts', 'load-js', 'load-css']);
+gulp.task('load-assets', ['load-fonts', 'load-js']);
 
 gulp.task('sass', () => {
   return gulp.src('scss/master.scss')

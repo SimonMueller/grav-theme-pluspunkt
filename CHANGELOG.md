@@ -27,3 +27,10 @@
 
 1. [](#bugfix)
     * Fix pagination base_url with relative URLs
+
+# v1.1.0
+## 22.09.2018
+
+1. [](#improved)
+    * dev package updates
+    * font-awesome updated to version 5.x
