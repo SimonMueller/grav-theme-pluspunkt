@@ -3,7 +3,7 @@
 
 1. [](#improved)
     * reversed changelog order for better readability
-    * replaced <br/> tags with <br>
+    * simplify br html tags
 
 # v1.1.0
 ## 22.09.2018
