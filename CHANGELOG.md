@@ -1,8 +1,21 @@
-# v1.0.0
-## 19.12.2017
+# v1.1.0
+## 22.09.2018
+
+1. [](#improved)
+    * dev package updates
+    * font-awesome updated to version 5.x
+
+# v1.0.3
+## 9.01.2018
+
+1. [](#bugfix)
+    * Fix pagination base_url with relative URLs
+
+# v1.0.2
+## 6.01.2018
 
 1. [](#new)
-    * Initial release
+    * Added CONTRIBUTING.md
 
 # v1.0.1
 ## 30.12.2017
@@ -16,21 +29,8 @@
     * Correct padding of footer widget
     * Fix display of publish date
 
-# v1.0.2
-## 6.01.2018
+# v1.0.0
+## 19.12.2017
 
 1. [](#new)
-    * Added CONTRIBUTING.md
-
-# v1.0.3
-## 9.01.2018
-
-1. [](#bugfix)
-    * Fix pagination base_url with relative URLs
-
-# v1.1.0
-## 22.09.2018
-
-1. [](#improved)
-    * dev package updates
-    * font-awesome updated to version 5.x
+    * Initial release
