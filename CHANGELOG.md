@@ -1,3 +1,10 @@
+# v1.1.1
+## 23.09.2018
+
+1. [](#improved)
+    * reversed changelog order for better readability
+    * replaced <br/> tags with <br>
+
 # v1.1.0
 ## 22.09.2018
 
