@@ -31,7 +31,7 @@
   },
   "homepage": "https://github.com/SimonMueller/grav-theme-pluspunkt#readme",
   "devDependencies": {
-    "@fortawesome/fontawesome-free": "^5.8.1",
+    "@fortawesome/fontawesome-free": "~5.8.1",
     "Respond.js": "git+https:github.com/scottjehl/Respond#1.4.2",
     "autoprefixer": "~8.5.0",
     "babel-core": "~6.26.3",
@@ -41,7 +41,7 @@
     "gulp-babel": "~7.0.1",
     "gulp-file": "~0.4.0",
     "gulp-postcss": "~7.0.1",
-    "gulp-sass": "^4.0.2",
+    "gulp-sass": "~4.0.2",
     "kube": "git+https:github.com/imperavi/kube#v6.5.2",
     "modernizr": "~3.7.1",
     "smooth-scroll": "~12.1.5"
