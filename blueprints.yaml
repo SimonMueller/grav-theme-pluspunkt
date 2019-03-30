@@ -11,6 +11,9 @@ keywords: pluspunkt, grav, theme, kube, modern, responsive
 bugs: https://github.com/SimonMueller/grav-theme-pluspunkt/issues
 license: GPL-3.0
 
+dependencies:
+  - { name: grav, version: '>=1.5.10' }
+
 form:
   validation: loose
   fields:
