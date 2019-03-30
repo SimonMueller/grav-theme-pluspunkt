@@ -43,7 +43,7 @@
     "gulp-postcss": "~7.0.1",
     "gulp-sass": "^4.0.2",
     "kube": "git+https:github.com/imperavi/kube#v6.5.2",
-    "modernizr": "^3.7.1",
+    "modernizr": "~3.7.1",
     "smooth-scroll": "~12.1.5"
   },
   "engines": {
