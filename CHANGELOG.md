@@ -1,3 +1,10 @@
+# v1.2.0
+## 30.03.2019
+
+1. [](#improved)
+    * package updates
+    * grav min version -> 1.5.10
+
 # v1.1.1
 ## 23.09.2018
 
