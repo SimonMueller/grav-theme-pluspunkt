@@ -11,6 +11,9 @@ Thumbs.db
 # node
 /node_modules
 
+# intelliJ
+.idea/
+
 # Logs
 logs
 *.log
