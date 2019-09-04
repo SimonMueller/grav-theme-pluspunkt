@@ -196,7 +196,7 @@ Once this is done, you should be able to see the new theme on the frontend. Keep
 
 # License
 
-Copyright (C) 2017 Simon Müller
+Copyright (C) 2019 Simon Müller
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
