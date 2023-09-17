@@ -30,7 +30,7 @@
         {% do assets.addCss('theme://css/master.css', {'priority': 100}) %}
         {% do assets.addCss('theme://css/custom.css', 99) %}
 
-        {{ assets.css() }}
+        {{ assets.css()|raw }}
       {% endblock %}
     {% endblock %}
   </head>
@@ -97,7 +97,7 @@
       {% do assets.add('theme://js/smooth-scroll.js', {'priority': 98}) %}
       {% do assets.add('theme://js/pluspunkt.js', {'priority': 97}) %}
 
-      {{ assets.js() }}
+      {{ assets.js()|raw }}
     {% endblock %}
   </body>
 </html>
